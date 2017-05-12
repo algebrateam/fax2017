@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\StudController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,8 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/xxy', function () {
-    return view('about');
+Route::get('/child',function(){
+    return view('child');
+});
+Route::get('/about', function () {
+    return view('about',['name' => 'James']);
 });
 Route::get('/hello', function()
 {
@@ -42,3 +45,4 @@ Route::get('test/{name}', array('as' => 'mojtest',function($name)
 Route::get('/student', '\App\Http\Controllers\StudController@pozdrav');
 Route::get('/student1', '\App\Http\Controllers\StudController@uci');
 Route::get('studenti','\App\Http\Controllers\StudController@lista');
+Route::get('/stud','StudController@studtabla');

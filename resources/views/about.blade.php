@@ -81,7 +81,13 @@
                 <div class="title m-b-md">
                     Ovo je naš prvi laravel projekt Fax2017
                 </div>
-
+                <div><strong>{{ $name }}</strong> </div>
+                <div style="color:black;font-size: 15px;font-weight: bold">
+                    {{print_r($_ENV) }}
+                <?php 
+                print_r($_REQUEST);
+                print_r($_ENV);
+                ?></div>
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
