@@ -28,6 +28,28 @@
     <li><a href="https://github.com/laravel/socialite">Socialite</a></li>
 </ul>
 
-{{print_r($studenti)}}
+
+
+<table border="0" cellpadding="2">
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @forelse($studenti as $s)
+        <tr>
+            <td>{{$s->imeStud}}</td>
+            <td>{{$s->email}}</td>
+        </tr>
+@empty
+        <tr>
+            <td colspan="2">Nema studenata ?!</td>
+        </tr>
+        @endforelse
+    </tbody>
+</table>
+
 
 @endsection

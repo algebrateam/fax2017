@@ -25,7 +25,7 @@ class StudController extends Controller
     public function studtabla(){
        $s= new \App\Stud;
         $studenti=$s->all();
-        return view('child', $studenti);
+        return view('child', ['studenti' => $studenti]);
        //return view('child')->with($studenti); 
     }
 }
